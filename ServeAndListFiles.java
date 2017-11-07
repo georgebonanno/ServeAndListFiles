@@ -48,8 +48,10 @@ public class ServeAndListFiles {
 						running = false;
 					} 
 				}
-				long stop = System.currentTimeMillis();
-				System.out.printf("%s|%s|%sms%n",sdf.format(new Date()),requestUrl,(stop-start));
+				if (start > 0) {
+					long stop = System.currentTimeMillis();
+					System.out.printf("%s|%s|%sms%n",sdf.format(new Date()),requestUrl,(stop-start));
+				}
 			} 
 		}
 	};
